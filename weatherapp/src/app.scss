@@ -1,0 +1,145 @@
+@import "../src/global_styles/global-colours.scss";
+
+
+.app 
+{
+  margin:  0;
+  padding: 0;
+
+  height: 100vh;
+  width: 100vw;
+  //box-sizing: border-box;
+  
+  overflow: hidden;
+
+  //Foreground Container
+  .FG-container
+  {
+    //Sizing
+    height: 100vh;
+    width: 100vw;
+    
+    img
+    {
+      //Positioning
+      position: relative;
+      align-items: center;
+      margin: 0 50%;
+      top:5%;
+      right: 375px;
+      z-index: 2;
+
+      //Sizing
+      max-height: 50vh;
+      max-width: 100vw;
+
+      box-shadow: 5px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-container
+    {
+
+      position: relative;
+      margin-top: 50px;
+      left: 40%;
+      width: 20%;
+
+      border-radius: 20px;
+      box-shadow: 3px 5px rgba(0, 0, 0, 0.034);
+      background-color: rgba(255, 255, 255, 0.288);
+
+      .location-box
+      {
+        //alignment
+        margin: 0px;
+        padding: 0px;  
+        z-index: 3;
+  
+        .location
+        {
+          position: relative;
+  
+          top: 20%;
+          left: 0;
+    
+          h1
+          {
+            //alignment
+            margin: 0;
+            text-align: center;
+  
+            //styling
+            color: whitesmoke;
+            font-size: 50px;
+            text-shadow: 2.5px 2.5px #558abb71;      
+          }
+        }
+        .date
+        {
+  
+          h2
+          {
+            //alignment
+            margin: 0;
+            text-align: center;
+  
+            //styling
+            color: whitesmoke;          
+            text-shadow: 1.5px 1.5px #558abb71;
+            font-size: 20px;
+            font-style: italic;  
+          }
+          
+        } 
+      }
+  
+      .weather-box
+      {
+        margin: 0px;
+        padding: 0px;  
+        z-index: 3;
+        display: inline-block;
+        position: relative;
+        left: 50%;
+  
+        color: whitesmoke;          
+        text-shadow: 1.5px 1.5px #558abb71;
+        font-size: 30px;
+        
+        .temperature
+        {
+          position: relative;
+          margin: 5px 10px;
+          left: -40%;
+        }
+  
+        .weather-type
+        {
+          position: relative;
+          margin: 5px auto;
+          left: -50%;
+        }
+      }
+    }
+  }
+
+  //Background Containers
+  .BG-container
+  {
+
+    position: relative;
+
+    padding: 50px 0px;
+    bottom: 110%;
+    z-index: 0;
+
+    height: inherit;
+    width: inherit;
+    background-color: $dayColour;
+    background: linear-gradient($dayColour, $dayColourGradient);
+
+    z-index: -1;
+  }
+
+}
+
