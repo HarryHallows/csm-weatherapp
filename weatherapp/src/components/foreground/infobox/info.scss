@@ -1,0 +1,554 @@
+@import "../../../global_styles/global-colours.scss";
+@import "../../../global_styles/global-responsive.scss";
+
+.info
+{
+    color: white;
+    text-shadow: 2.5px 2.5px #0000003f;      
+
+    position: relative;
+
+    top: 25%;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+
+    max-width: 100vw;
+    max-height: fit-content;
+
+    .text-container
+    {
+        position: relative;
+        flex-basis: 100%;
+        height: 500px;
+
+        right:-375px;
+        z-index: 3;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .location-box
+        {
+            justify-content: flex-start;
+            flex-basis: 326px;
+            align-self: flex-start;
+
+            text-align: center;
+            margin-left: 30px;
+            margin-top: 30px;
+            position: relative;
+            top: -2.7rem;
+            right: -17rem;
+            font-size: 20px;
+
+            @media (max-width: 1920px) 
+            {
+                justify-content: flex-start;
+                flex-basis: 326px;
+                align-self: flex-start;
+
+                text-align: center;
+                margin-left: 30px;
+                margin-top: 30px;
+                position: relative;
+                right: -15rem;
+                font-size: 20px;
+            }
+
+            @media (max-width: 1920px) 
+            {
+                justify-content: flex-start;
+                flex-basis: 326px;
+                align-self: flex-start;
+
+                text-align: center;
+                margin-left: 30px;
+                margin-top: 30px;
+                position: relative;
+                right: -15rem;
+                font-size: 20px;
+            }
+
+            @media (max-width: 1820px) 
+            {
+                justify-content: flex-start;
+                flex-basis: 326px;
+                align-self: flex-start;
+
+                text-align: center;
+                margin-left: 30px;
+                margin-top: 30px;
+                position: relative;
+                right: -12rem;
+                font-size: 20px;
+            }
+
+            @media (max-width: 1700px) 
+            {
+                justify-content: flex-start;
+                flex-basis: 326px;
+                align-self: flex-start;
+
+                text-align: center;
+                margin-left: 30px;
+                margin-top: 30px;
+                position: relative;
+                right: -9rem;
+                font-size: 20px;
+            }
+
+            @media (max-width: 1650px) 
+            {
+                justify-content: flex-start;
+                flex-basis: 326px;
+                align-self: flex-start;
+
+                text-align: center;
+                margin-left: 30px;
+                margin-top: 30px;
+                position: relative;
+                right: -7rem;
+                font-size: 20px;
+            }
+
+            @media (max-width: 1550px) 
+            {
+                justify-content: flex-start;
+                flex-basis: 326px;
+                align-self: flex-start;
+
+                text-align: center;
+                margin-left: 30px;
+                margin-top: 30px;
+                position: relative;
+
+                top: 10rem;
+                right: -8rem;
+                font-size: 20px;
+            }
+
+            @media (max-width: 1500px) 
+            {
+                justify-content: flex-start;
+                flex-basis: 326px;
+                align-self: flex-start;
+
+                text-align: center;
+                margin-left: 30px;
+                margin-top: 30px;
+                position: relative;
+
+                top: 10rem;
+                right: -5rem;
+                font-size: 20px;
+            }
+        
+            @media (max-width: 1400px) 
+            {
+                justify-content: flex-start;
+                flex-basis: 326px;
+                align-self: flex-start;
+
+                text-align: center;
+                margin-left: 30px;
+                margin-top: 30px;
+                position: relative;
+                top: 10rem;
+                right: -2rem;
+                font-size: 20px;
+            }
+
+            @media (max-width: 1100px) 
+            {
+                justify-content: flex-start;
+                flex-basis: 326px;
+                align-self: flex-start;
+
+                text-align: center;
+                margin-left: 30px;
+                margin-top: 30px;
+                position: relative;
+
+                top: 10rem;
+                right: -1rem;
+                font-size: 20px;
+            }
+        
+        }
+
+        .temperature-container
+        {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            align-items: center;
+            font-size: 80px;
+            text-align: center;
+
+            top: -200px;
+            left: 19rem;
+
+            margin-right: 30px;
+
+            @media (max-width: 1950px) 
+            {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                font-size: 80px;
+    
+                top: -200px;
+                left: 16rem;
+    
+                margin-right: 30px;
+            }
+
+            @media (max-width: 1850px) 
+            {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                font-size: 80px;
+    
+                top: -200px;
+                left: 14rem;
+    
+                margin-right: 30px;
+            }
+
+            @media (max-width: 1780px) 
+            {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                font-size: 80px;
+    
+                top: -200px;
+                left: 13rem;
+    
+                margin-right: 30px;
+            }
+
+            @media (max-width: 1750px) 
+            {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                font-size: 80px;
+    
+                top: -200px;
+                left: 10rem;
+    
+                margin-right: 30px;
+            }
+
+            @media (max-width: 1650px) 
+            {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                font-size: 80px;
+    
+                top: -200px;
+                left: 8rem;
+    
+                margin-right: 30px;
+            }
+
+            @media (max-width: 1580px) 
+            {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                font-size: 80px;
+    
+                top: -200px;
+                left: 7rem;
+    
+                margin-right: 30px;
+            }
+
+            @media (max-width: 1550px) 
+            {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                font-size: 80px;
+    
+                top: 1rem;
+                left: 9rem;
+    
+                margin-right: 30px;
+            }
+
+            @media (max-width: 1480px) 
+            {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                font-size: 80px;
+    
+                top: 1rem;
+                left: 7rem;
+    
+                margin-right: 30px;
+            }
+
+            @media (max-width: 1400px) 
+            {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                font-size: 80px;
+    
+                top: 1rem;
+                left: 5rem;
+    
+                margin-right: 30px;
+            }
+
+            @media (max-width: 1100px) 
+            {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                font-size: 80px;
+    
+                top: 1rem;
+                left: 5rem;
+    
+                margin-right: 30px;
+            }
+        }
+
+        .weather-type
+        {
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            margin-top: 30px;
+            align-items: center;
+
+            text-align: center;
+            width: 500px;
+            font-size: 65px;
+
+            top:150px;
+            right: 12.5rem;
+            margin-right: 30px;
+            margin-bottom: 30px;
+
+            @media (max-width: 1920px) 
+            {
+                position: relative;
+                display: flex;
+                justify-content: center;
+
+                margin-top: 30px;
+                align-items: center;
+
+                text-align: center;
+                width: 500px;
+                font-size: 65px;
+
+                top:150px;
+                right: 19rem;
+                margin-right: 30px;
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 1900px) 
+            {
+                position: relative;
+                display: flex;
+                justify-content: center;
+    
+                margin-top: 30px;
+                align-items: center;
+    
+                text-align: center;
+                width: 500px;
+                font-size: 65px;
+    
+                top:150px;
+                right: 16rem;
+                margin-right: 30px;
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 1775px) 
+            {
+                position: relative;
+                display: flex;
+                justify-content: center;
+    
+                margin-top: 30px;
+                align-items: center;
+    
+                text-align: center;
+                width: 500px;
+                font-size: 65px;
+    
+                top:150px;
+                right: 20rem;
+                margin-right: 30px;
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 1700px) 
+            {
+                position: relative;
+                display: flex;
+                justify-content: center;
+    
+                margin-top: 30px;
+                align-items: center;
+    
+                text-align: center;
+                width: 500px;
+                font-size: 65px;
+    
+                top:150px;
+                right: 23rem;
+                margin-right: 30px;
+                margin-bottom: 30px;
+            }
+
+
+            @media (max-width: 1550px) 
+            {
+                position: relative;
+                display: flex;
+                justify-content: center;
+    
+                margin-top: 30px;
+                align-items: center;
+    
+                text-align: center;
+                width: 500px;
+                font-size: 65px;
+    
+                top: 20rem;
+                right: 22rem;
+                margin-right: 30px;
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 1410px) 
+            {
+                position: relative;
+                display: flex;
+                justify-content: center;
+    
+                margin-top: 30px;
+                align-items: center;
+    
+                text-align: center;
+                width: 500px;
+                font-size: 60px;
+    
+                top: 23rem;
+                right: 27rem;
+                margin-right: 30px;
+                margin-bottom: 30px;
+            }
+            
+            @media (max-width: 1400px) 
+            {
+                position: relative;
+                display: flex;
+                justify-content: center;
+    
+                margin-top: 30px;
+                align-items: center;
+    
+                text-align: center;
+                width: 500px;
+                font-size: 60px;
+    
+                top: 23rem;
+                right: 24rem;
+                margin-right: 30px;
+                margin-bottom: 30px;
+            }
+
+
+            @media (max-width: 1100px) 
+            {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                align-items: center;
+                font-size: 60px;
+    
+                top: 23rem;
+                right: 23rem;
+    
+                margin-right: 30px;
+            }
+        }
+          
+    }
+
+    .weather-box
+    {
+        position: relative;
+        width: 500px;
+        height: 500px;
+
+        min-width: 500px;
+        
+        left: -35rem;
+        border-radius: 20px;
+        background: linear-gradient($dayColour, $dayColourGradient);
+       
+        @media (max-width: 1550px) 
+        {
+            position: relative;
+
+
+            min-width: 500px;
+            width: 500px;
+            height: 500px;
+
+            
+            top: 200px;
+            left: -30rem;
+        }
+
+        @media (max-width: 1100px) 
+        {
+            position: relative;
+
+
+            min-width: 500px;
+            width: 1000px;
+            height: 500px;
+            
+            top: 200px;
+            left: -30rem;
+        }
+    }
+
+    @media mobile and ( max-width: $mobileWidth) 
+    {
+       // flex-direction: column;  
+    }
+}

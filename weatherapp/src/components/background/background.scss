@@ -1,0 +1,59 @@
+@import "../../global_styles/global-colours.scss";
+
+
+.background
+{
+    position: relative;
+    height: 200%;
+    width: 100vw;
+    top: 0;
+    z-index: 0;
+    background-color: $backgroundColour;
+
+
+    .logo-container
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        top: 20%;
+        right: 30%;
+
+        img
+        {
+          position: relative;
+          max-height: 30vh;
+          max-width: 90vw;
+    
+          z-index: 1;
+        }
+    
+        @media (max-width: 1550px) 
+        {
+            position: relative;
+            max-height: 30vh;
+            max-width: 90vw;
+      
+            right: -10em;
+            z-index: 1;
+
+
+        }
+
+        @media (max-width: 1050px) 
+        {
+            position: relative;
+            max-height: 30vh;
+            max-width: 90vw;
+      
+            right: -8em;
+            z-index: 1;
+
+
+        }
+    
+    }
+  
+}
