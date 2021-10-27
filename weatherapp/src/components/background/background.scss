@@ -1,12 +1,36 @@
+@import "../../global_styles/global-colours.scss";
+
+
 .background
 {
     position: relative;
-    height: 100vh;
+    height: 200%;
     width: 100vw;
-    
-    top: -2.9%;
-
+    top: 0;
     z-index: 0;
-
     background-color: black;
+
+
+    .logo-container
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        top: 20%;
+        right: 30%;
+
+        img
+        {
+          position: relative;
+          max-height: 30vh;
+          max-width: 90vw;
+    
+          box-shadow: 5px 8px rgba(0, 0, 0, 0.1);
+    
+          z-index: 1;
+        }
+    }
+  
 }

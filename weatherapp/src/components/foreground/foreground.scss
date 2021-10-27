@@ -1,0 +1,14 @@
+@import "../../global_styles/global-colours.scss";
+
+
+.foreground
+{
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    top:0;
+    
+    z-index: 1;
+
+}

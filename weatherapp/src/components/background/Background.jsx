@@ -4,7 +4,10 @@ import './background.scss';
 export default function Background() {
     return (
         <div className="background">
-            <h1>hello</h1>
+            <div className="logo-container">
+                <img src="/assets/foreground/csm-foreground.svg" alt="central saint martins logo" />        
+            </div>
+           
         </div>
     )
 }
