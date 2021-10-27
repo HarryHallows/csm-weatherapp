@@ -1,0 +1,10 @@
+import React from 'react'
+import './background.scss';
+
+export default function Background() {
+    return (
+        <div className="background">
+            <h1>hello</h1>
+        </div>
+    )
+}

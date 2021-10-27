@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
 import './app.scss';
-
+import Foreground from './components/foreground/Foreground';
+import Background from './components/background/Background.jsx';
 
 function App() 
 {
-
-  const [query, setQuery] = useState('');
-  const [weather, setWeather] = useState({});
-
   const dateBuilder = (d) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -28,68 +24,69 @@ function App()
   }
   
   window.addEventListener("load", () => {
-    let currentLongitude;
-    let currentLatitude;
+    //These are overridden by the local coords but these are the CSM coordinates
+    let latitude = '51.53'; 
+    let longitude = '-0.12';
+
     let apiKey = '9f97fc4feea97d1dc07ac9864c1e83af';
     let appID = '7dc79c65';
-  
+
+    let temperatureDescripton = document.querySelector('.temperature-description');
+    let weatherType = document.querySelector('.weather-type');
+
+    //Tries to get access to computer location
     if(navigator.geolocation)
     {
+      //SETS THE LOCAL LOCATION TO THE COORDINATE VARIABLES
       navigator.geolocation.getCurrentPosition(position => {
-        currentLongitude = position.coords.longitude;
-        currentLatitude = position.coords.latitude;
+        //Gets the direct local location of the coordinates
+        longitude = position.coords.longitude; 
+        latitude = position.coords.latitude;
   
-        const api = `https://api.weatherunlocked.com/api/current/${currentLatitude},${currentLongitude}?app_id=${appID}&app_key=${apiKey}/${dateBuilder(new Date())}`
+        //const proxy = "https://cors-anywhere.herokuapp.com/"; //If CORS error was needed
+        const api = `http://api.weatherunlocked.com/api/current/${latitude}, ${longitude}?app_id=${appID}&app_key=${apiKey}`;
         
+        fetch(`${api}`)
+          .then(response => {
+            return response.json();
+          })
+          .then(data => {
+            console.log(data);
+            const {temp_c, wx_desc} = data;
+            //Set DOM Elements from the API
+            temperatureDescripton.textContent = temp_c;
+            weatherType.textContent = wx_desc; 
+          })
       });
     
-      //fetch()
-      console.log(`Successfully accessed Long: ${currentLatitude} && Lat: ${currentLatitude}`);
+    
+      console.log(`Successfully accessed local location`);
     }
     else
     {
+      //If the user decides not to accept local locations then use pre-set coordinates
+      const api = `http://api.weatherunlocked.com/api/current/${latitude}, ${longitude}?app_id=${appID}&app_key=${apiKey}`;
+    
+      fetch(`${api}`)
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          console.log(data);
+          const {temp_c, wx_desc} = data;
+          //Set DOM Elements from the API
+          temperatureDescripton.textContent = temp_c;
+          weatherType.textContent = wx_desc; 
+        })
       console.log('Unsuccessfully retrieved access to the location of the operating machine.');
     }
   });
-  
-//#region legacy code
-
-  /*const search = evt => {
-    if (evt.key === "Enter")
-    {
-      fetch(`${api.base}weather?q=${query}&units=metric&APID=${api.key}`)
-        .then(res => res.json())  
-        .then(result => {
-          setWeather(result);
-          setQuery(''); 
-          console.log(result);
-        });
-    }
-  }*/
-  
-//#endregion
 
   return (
     <div className="app">
-
-
-      {/*
-      <main>
-        <div className="search-box">
-          <input 
-          type="text" 
-          className="search-bar"
-          placeholder="Search Location..."
-          onChange={e => setQuery(e.target.value)}
-          value={query}
-          //onKeyPress={search}
-          />
-        </div>
-      </main>
-      */}
-
-
       <div className="FG-container">
+        <Foreground/>
+
         <div className="text-container">
           <div className="location-box">
             <div className="location"><h1>London, UK</h1></div>
@@ -98,8 +95,13 @@ function App()
           </div>   
 
           <div className="weather-box">
-            <div className="temperature">15°c</div>
-            <div className="weather-type">Cloudy</div>
+
+            <div className="temperatureAmount">
+              <div className="temperature-description">--</div>
+              <div className="degree-sign">°c</div>
+            </div>
+            
+            <div className="weather-type">--</div>
           </div>
         </div>
         
@@ -108,6 +110,7 @@ function App()
       </div>
 
       <div className="BG-container">
+        <Background/>
 
         {
         // Day + Night containers && sunny/cloudy/rainy weather cycles
