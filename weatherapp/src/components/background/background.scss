@@ -8,7 +8,7 @@
     width: 100vw;
     top: 0;
     z-index: 0;
-    background-color: black;
+    background-color: $backgroundColour;
 
 
     .logo-container
@@ -26,8 +26,6 @@
           position: relative;
           max-height: 30vh;
           max-width: 90vw;
-    
-          box-shadow: 5px 8px rgba(0, 0, 0, 0.1);
     
           z-index: 1;
         }
