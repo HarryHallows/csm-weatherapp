@@ -1,5 +1,5 @@
 @import "../src/global_styles/global-colours.scss";
-
+@import "../src/global_styles/global-responsive.scss";
 
 .app 
 {
@@ -39,5 +39,11 @@
     //background: linear-gradient($dayColour, $dayColourGradient);
 
     z-index: -1;
+  }
+
+
+  @media all and ( max-width: $mobileWidth) 
+  {
+    flex-direction: column;  
   }
 }

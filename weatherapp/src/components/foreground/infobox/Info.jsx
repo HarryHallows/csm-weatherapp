@@ -1,4 +1,3 @@
-import React from 'react'
 import './info.scss';
 
 export default function Info() {
@@ -32,7 +31,8 @@ export default function Info() {
     
         let temperatureDescripton = document.querySelector('.temperature-description');
         let weatherType = document.querySelector('.weather-type');
-    
+        
+
         //Tries to get access to computer location
         if(navigator.geolocation)
         {
@@ -54,17 +54,17 @@ export default function Info() {
                 const {temp_c, wx_desc} = data;
                 //Set DOM Elements from the API
                 temperatureDescripton.textContent = temp_c;
-                weatherType.textContent = wx_desc; 
+                weatherType.textContent = wx_desc;
               })
+ 
           });
-        
         
           console.log(`Successfully accessed local location`);
         }
         else
         {
           //If the user decides not to accept local locations then use pre-set coordinates
-          const api = `http://api.weatherunlocked.com/api/current/${latitude}, ${longitude}?app_id=${appID}&app_key=${apiKey}`;
+          const api = `http://api.weatherunlocked.com/api/current/${latitude},${longitude}?app_id=${appID}&app_key=${apiKey}`;
         
           fetch(`${api}`)
             .then(response => {
@@ -75,15 +75,16 @@ export default function Info() {
               const {temp_c, wx_desc} = data;
               //Set DOM Elements from the API
               temperatureDescripton.textContent = temp_c;
-              weatherType.textContent = wx_desc; 
+              weatherType.textContent = wx_desc;
+
             })
           console.log('Unsuccessfully retrieved access to the location of the operating machine.');
         }
+
       });
 
     return (
         <div className="info">
-
 
             <div className="text-container">
                 <div className="location-box">
@@ -100,12 +101,7 @@ export default function Info() {
             </div>
            
 
-            <div className="weather-box">
-
-            </div>
-        {
-        // Day + Night containers && sunny/cloudy/rainy weather cycles
-        }
+            <div className="weather-box"></div>
         </div>
     )
 }
